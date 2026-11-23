@@ -1,0 +1,6 @@
+{
+  "name": "狮城气象格网 · 新加坡 48h 天气预报与降水预警",
+  "description": "面向新加坡全岛的 48 小时高精度天气预报格网与实时降水概率预警系统，集成 Google Maps 交互式气象底图与 Gemini Maps Grounding 周边防雨避险参谋。",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

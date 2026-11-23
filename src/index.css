@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", "Noto Sans SC", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom precision scrubber range slider */
+input[type="range"].meteo-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+}
+
+input[type="range"].meteo-slider::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 3px;
+  background: #e2e8f0;
+}
+
+input[type="range"].meteo-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 9999px;
+  background: #1d4ed8;
+  border: 2px solid #ffffff;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.25);
+  margin-top: -5px;
+  cursor: pointer;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].meteo-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+input[type="range"].meteo-slider:focus-visible::-webkit-slider-thumb {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+/* Markdown prose formatting for Gemini Maps Grounding output */
+.grounding-prose h1,
+.grounding-prose h2,
+.grounding-prose h3 {
+  font-weight: 600;
+  color: #0f172a;
+  margin-top: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.grounding-prose p {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.grounding-prose ul,
+.grounding-prose ol {
+  padding-left: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.grounding-prose ul {
+  list-style-type: disc;
+}
+
+.grounding-prose ol {
+  list-style-type: decimal;
+}
+
+.grounding-prose li {
+  margin-bottom: 0.25rem;
+  line-height: 1.55;
+}
+
+.grounding-prose strong {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.grounding-prose a {
+  color: #1d4ed8;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
